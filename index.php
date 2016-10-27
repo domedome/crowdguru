@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <div class="l-container">
     <main role="main" class="l-col-8 l-pad-2" id="posts">
 

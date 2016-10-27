@@ -13,9 +13,17 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+    <?php 
+    $navClass = '';
+    $check = get_field('tranpatent_nav');
+    if($check){
+        $navClass = ' transparent-nav';
+    } else {
+        $navClass = ' header-bg';
+    }
+    ?>
     <div id="site-container" class="site-container">
-        <header id="site-header" class="l-header header">
+        <header id="site-header" class="l-header header <?php echo $navClass; ?>">
             <div class="l-container">
                 <div class="l-col-12">
 
@@ -42,3 +50,4 @@
             </div>
         </header>
         <div class="site-content">
+            <?php get_template_part( 'template-parts/content', 'hero' ); ?>

@@ -105,7 +105,8 @@ function front_assets_load() {
     wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/javascript/dist/scripts.js', array('jquery'));
 
     /* Enqueue google font */
-    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,400i,700');
+    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,700');
+    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Open+Sans');
 
     /* Enqueue comment-reply script if needed */
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -113,3 +114,24 @@ function front_assets_load() {
 	}
 }
 add_action('wp_enqueue_scripts', 'front_assets_load');
+
+/************************************
+ Hex to RGB - custom gradient overlay
+*************************************/
+
+function hex2rgb($hex) {
+   $hex = str_replace("#", "", $hex);
+
+   if(strlen($hex) == 3) {
+      $r = hexdec(substr($hex,0,1).substr($hex,0,1));
+      $g = hexdec(substr($hex,1,1).substr($hex,1,1));
+      $b = hexdec(substr($hex,2,1).substr($hex,2,1));
+   } else {
+      $r = hexdec(substr($hex,0,2));
+      $g = hexdec(substr($hex,2,2));
+      $b = hexdec(substr($hex,4,2));
+   }
+   $rgb = ''.$r.','.$g.','.$b;
+   //return implode(",", $rgb); // returns the rgb values separated by commas
+   return $rgb; // returns an array with the rgb values
+}
