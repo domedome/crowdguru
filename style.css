@@ -867,207 +867,6 @@ html {
   .l-mpbottom-11, .l-mpad-11 {
     padding-bottom: 11em; } }
 
-/*----------------------
-   Hero Customizer
------------------------*/
-.hero-image {
-  width: 100%;
-  min-height: 40vh;
-  background-size: cover;
-  background-position: center;
-  position: relative; }
-
-.gradient-overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0; }
-
-.page-claim {
-  padding-top: 25vh;
-  position: relative;
-  line-height: 1.4; }
-
-.page-claim-title {
-  font-weight: 600;
-  margin-bottom: 0;
-  font-size: 42px; }
-
-.page-claim-subtitle {
-  font-weight: 400;
-  margin: 0;
-  font-size: 36px; }
-
-.columns-description {
-  margin: 60px 0;
-  position: relative;
-  color: #FFFFFF;
-  font-size: 16px; }
-
-.cta-hero {
-  position: relative;
-  margin: 40px 0;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 17px;
-  min-height: 50px; }
-  .cta-hero .mainCta {
-    background-color: #FFFFFF;
-    color: #27385D;
-    padding: 1rem 2rem;
-    border-radius: 3px;
-    font-weight: 600; }
-    .cta-hero .mainCta:hover {
-      -webkit-transition: all 0.14s;
-      transition: all 0.14s;
-      text-decoration: none;
-      background-color: #f2f2f2;
-      -webkit-transition: all .35s ease-in-out;
-      transition: all .35s ease-in-out; }
-  .cta-hero .secondCta {
-    color: #FFFFFF;
-    margin: 30px 0;
-    display: inline-block;
-    padding: .7rem 1.7rem;
-    border: 2px solid white;
-    border-radius: 3px; }
-    @media screen and (min-width: 980px) {
-      .cta-hero .secondCta {
-        margin: 0;
-        border: none; } }
-
-.popupOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 9999999;
-  background-color: rgba(0, 0, 0, 0.2);
-  -webkit-overflow-scrolling: touch; }
-
-.popupContent {
-  background-color: #FFFFFF;
-  border-radius: 3px;
-  padding: 60px;
-  width: 400px;
-  min-height: 200px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin: 160px 0 0 -200px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12); }
-
-.hide-popup {
-  display: none; }
-
-.is-popup-on {
-  overflow-y: hidden;
-  padding-right: 15px; }
-
-.customers-hero {
-  margin: 60px 0 40px;
-  position: relative;
-  display: inline-block;
-  min-height: 80px; }
-  .customers-hero .customers-label {
-    color: #FFFFFF;
-    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    margin-top: 30px; }
-  .customers-hero .customer-logo {
-    height: 80px;
-    width: 160px;
-    background-size: cover;
-    background-position: center;
-    display: inline-block;
-    margin: 0 auto; }
-
-/*----------------------
-   Features Icons
------------------------*/
-.service-wrapper {
-  width: 21%;
-  text-align: center;
-  margin-top: 60px;
-  color: #aebdc1; }
-
-.feature-icon {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.feature-title {
-  color: #5694CB;
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 21px; }
-
-/*----------------------
-   Testimonials Slider
------------------------*/
-.testimonialsBg {
-  width: 100%;
-  min-height: 40vh;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  margin: 90px 0;
-  color: #FFFFFF; }
-
-#slider {
-  position: relative;
-  overflow: hidden;
-  margin: 20px auto 0 auto;
-  border-radius: 4px; }
-
-#slider ul {
-  position: relative;
-  margin: 0;
-  padding: 0;
-  height: 200px;
-  list-style: none;
-  margin-top: 60px; }
-
-#slider ul li {
-  position: relative;
-  display: block;
-  float: left;
-  margin: 0;
-  padding: 0;
-  width: 600px;
-  min-height: 300px;
-  background: #ccc;
-  text-align: center; }
-
-a.control_prev, a.control_next {
-  position: absolute;
-  top: 40%;
-  z-index: 999;
-  display: block;
-  padding: 4% 3%;
-  width: auto;
-  height: auto;
-  background: #2a2a2a;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  opacity: 0.8;
-  cursor: pointer; }
-
-a.control_prev:hover, a.control_next:hover {
-  opacity: 1;
-  -webkit-transition: all 0.2s ease; }
-
-a.control_prev {
-  border-radius: 0 2px 2px 0; }
-
-a.control_next {
-  right: 0;
-  border-radius: 2px 0 0 2px; }
-
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -1395,3 +1194,337 @@ textarea {
 
 input[type="submit"] {
   margin-top: .85rem; }
+
+/*----------------------
+   Hero Customizer
+-----------------------*/
+.hero-image {
+  width: 100%;
+  min-height: 40vh;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+
+.gradient-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.page-claim {
+  padding-top: 25vh;
+  position: relative;
+  line-height: 1.4; }
+
+.page-claim-title {
+  font-weight: 600;
+  margin-bottom: 0;
+  font-size: 42px; }
+
+.page-claim-subtitle {
+  font-weight: 400;
+  margin: 0;
+  font-size: 36px; }
+
+.columns-description {
+  margin: 60px 0;
+  position: relative;
+  color: #FFFFFF;
+  font-size: 16px; }
+
+.cta-hero {
+  position: relative;
+  margin: 40px 0;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  min-height: 50px; }
+  .cta-hero .mainCta {
+    background-color: #FFFFFF;
+    color: #27385D;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    font-weight: 600; }
+    .cta-hero .mainCta:hover {
+      -webkit-transition: all 0.14s;
+      transition: all 0.14s;
+      text-decoration: none;
+      background-color: #f2f2f2;
+      -webkit-transition: all .35s ease-in-out;
+      transition: all .35s ease-in-out; }
+  .cta-hero .secondCta {
+    color: #FFFFFF;
+    margin: 30px 0;
+    display: inline-block;
+    padding: .7rem 1.7rem;
+    border: 2px solid white;
+    border-radius: 3px; }
+    @media screen and (min-width: 980px) {
+      .cta-hero .secondCta {
+        margin: 0;
+        border: none; } }
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  overflow: scroll;
+  overflow-x: hidden;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-overflow-scrolling: touch; }
+
+.popupContent {
+  background-color: #FFFFFF;
+  display: inline-block;
+  border-radius: 3px;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  padding: 60px;
+  width: 380px;
+  min-height: 200px;
+  position: relative;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12);
+  text-align: left; }
+  @media screen and (min-width: 980px) {
+    .popupContent {
+      width: 500px; } }
+  .popupContent h3 {
+    color: #FF6600;
+    font-weight: 600; }
+  .popupContent input, .popupContent textarea {
+    background-color: #f6f6f6;
+    border: 1px solid #aebdc1;
+    height: 50px;
+    margin: 0;
+    border-radius: 3px;
+    padding-left: 15px; }
+  .popupContent input[type="submit"] {
+    background: #FF6600;
+    color: #FFFFFF;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase; }
+  .popupContent select {
+    margin: 0;
+    border: 1px solid #aebdc1;
+    background-color: #f6f6f6;
+    width: 100%;
+    padding: .5em;
+    padding-left: 15px;
+    font-size: 16px;
+    height: 50px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 0.9rem;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #808080; }
+  .popupContent label {
+    font-size: 14px; }
+
+.hide-popup {
+  display: none; }
+
+.is-popup-on {
+  overflow-y: hidden;
+  padding-right: 15px; }
+
+.customers-hero {
+  margin: 60px 0 40px;
+  position: relative;
+  display: inline-block;
+  min-height: 80px; }
+  .customers-hero .customers-label {
+    color: #FFFFFF;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin-top: 30px; }
+  .customers-hero .customer-logo {
+    height: 80px;
+    width: 160px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin: 0 auto; }
+
+.s-hidden {
+  display: none; }
+  @media screen and (min-width: 980px) {
+    .s-hidden {
+      display: inherit; } }
+
+/*----------------------
+   Features Icons
+-----------------------*/
+.service-wrapper {
+  padding: 0 20%;
+  text-align: center;
+  margin-top: 60px;
+  color: #aebdc1; }
+  @media screen and (min-width: 980px) {
+    .service-wrapper {
+      width: 21%;
+      padding: 0; } }
+
+.feature-icon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.feature-title {
+  color: #5694CB;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 21px; }
+
+/*----------------------
+   Testimonials Slider
+-----------------------*/
+.testimonialsBg {
+  width: 100%;
+  min-height: 40vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 60px 0;
+  color: #FFFFFF; }
+
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px; }
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 600px;
+  list-style: none; }
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  min-height: 400px;
+  text-align: center; }
+  @media screen and (min-width: 980px) {
+    #slider ul li {
+      width: 800px; } }
+  #slider ul li img {
+    height: auto;
+    width: 200px;
+    margin: 0 auto; }
+  #slider ul li .testimonial-sentence {
+    text-align: left;
+    font-size: 17px;
+    font-style: italic;
+    margin-bottom: 40px; }
+    #slider ul li .testimonial-sentence p {
+      margin: 0; }
+  #slider ul li .testimonial-name {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF6600;
+    text-align: right; }
+  #slider ul li .testimonial-position {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: right; }
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 25%;
+  z-index: 999;
+  display: block;
+  padding: 4% 1%;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer; }
+  a.control_prev img, a.control_next img {
+    display: block;
+    width: auto;
+    height: 70px; }
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease; }
+
+a.control_prev {
+  border-radius: 0 2px 2px 0; }
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px; }
+
+/*----------------------
+   Standard CTA
+-----------------------*/
+.standard-cta {
+  margin-top: 90px;
+  text-align: center; }
+
+.standard-cta-title {
+  line-height: 1.4; }
+  .standard-cta-title h2 {
+    font-size: 42px;
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 30px; }
+    @media screen and (min-width: 980px) {
+      .standard-cta-title h2 {
+        margin-bottom: 0; } }
+  .standard-cta-title h3 {
+    font-size: 36px;
+    margin: 0; }
+
+.standard-cta-description {
+  font-size: 21px;
+  color: #808080;
+  margin-top: 30px; }
+
+.standard-cta-buttons {
+  position: relative;
+  margin-top: 60px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  min-height: 50px; }
+  .standard-cta-buttons .mainCta {
+    background-color: #FF6600;
+    color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    font-weight: 600; }
+    .standard-cta-buttons .mainCta:hover {
+      -webkit-transition: all 0.14s;
+      transition: all 0.14s;
+      text-decoration: none;
+      background-color: #e65c00;
+      -webkit-transition: all .15s ease-in-out;
+      transition: all .15s ease-in-out; }
+  .standard-cta-buttons .secondCta {
+    color: #FF6600;
+    margin: 30px 0;
+    display: inline-block;
+    padding: .7rem 1.7rem;
+    border: 2px solid white;
+    border-radius: 3px; }
+    @media screen and (min-width: 980px) {
+      .standard-cta-buttons .secondCta {
+        margin: 0;
+        border: none; } }

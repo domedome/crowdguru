@@ -72,20 +72,27 @@
 
                     <div class="testimonialsBg" style="background-image:url('<?php echo $testimonialsBg ?>');">
                       <div class="gradient-overlay gradientTestimonials"></div>
-                      <a href="#" class="control_next"></a>
-                      <a href="#" class="control_prev"></a>
+                      <a href="#" class="control_next"><img src="<?php echo get_template_directory_uri(); ?>/images/next.svg"/></a>
+                      <a href="#" class="control_prev"><img src="<?php echo get_template_directory_uri(); ?>/images/prev.svg"/></a>
                       <div id="slider">
                         <ul>
 
 
 
                           <?php // loop through the rows of data
-              			      while ( have_rows('single_testimonial') ) : the_row(); ?>
+              			      while ( have_rows('single_testimonial') ) : the_row();
+                              $testimonialLogo = get_sub_field('logo'); ?>
                               <li>
-                                  <?php echo get_sub_field('logo'); ?>
-                                  <?php echo get_sub_field('sentence'); ?>
-                                  <?php echo get_sub_field('name'); ?>
-                                  <?php echo get_sub_field('position'); ?>
+                                  <img src="<?php echo $testimonialLogo['url']; ?>" alt="<?php echo $testimonialLogo['alt']; ?>" class="l-col-4"/>
+                                  <div class="l-col-8 l-col-push-2 testimonial-sentence">
+                                      <?php echo get_sub_field('sentence'); ?>
+                                  </div>
+                                  <div class="l-col-6 l-col-push-6 testimonial-name">
+                                      <?php echo get_sub_field('name'); ?>
+                                  </div>
+                                  <div class="l-col-6 l-col-push-6 testimonial-position">
+                                      <?php echo get_sub_field('position'); ?>
+                                  </div>
                               </li>
               					  <?php endwhile; ?>
 
@@ -94,11 +101,15 @@
                       </div>
                     </div>
 
-          			<?php endif;
-              endif;
+          		<?php endif;
+              elseif( get_row_layout() == 'standard_cta' ):?>
+                  <div class="l-container standard-cta">
+                      <?php get_template_part( 'template-parts/content', 'standardCTA' ); ?>
+                  </div>
+              <?php endif;
             endwhile;
         else :
-                // no layouts found
+                echo 'Nothing to show here';
         endif;
 
         ?>

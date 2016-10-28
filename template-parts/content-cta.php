@@ -49,37 +49,37 @@ if($secondaryCta):
 	if ($mainCtaType == 'popup'): ?>
 
 	<div id="ctaPopup" class="popupOverlay hide-popup">
-		<div class="l-container">
-				<div class="popupContent">
-					<?php
 
-					// Get the popup title
-					$popupTitle = get_field('popup_title');
-					if ($popupTitle): ?>
-						<h3 class="popup-title"><?php echo $popupTitle ?></h3>
-					<?php
-					endif;
+			<div class="popupContent">
+				<?php
 
-					//Display the popup content
-					$popupContent = get_field('popup');
-					if ($popupContent == 'form'):
-							echo the_field('contact_form');
-					elseif ($popupContent == 'text'): ?>
-							<div class="popup-text-content">
-								<?php echo the_field('popup_content') ?>
-							</div>
-							<?php
-							$popupBtnLinkType = get_field('popup_link');
-							if ($popupBtnLinkType == 'internal'){
-								$popupBtnLink = get_field('popup_btn_internal_link');
-							}elseif ($popupBtnLinkType == 'external'){
-								$popupBtnLink = get_field('popup_btn_external_link');
-							}
-							 ?>
-							<a href="<?php echo $popupBtnLink ?>"><?php echo the_field('popup_btn_content') ?></a>
-					<?php endif; ?>
-				</div>
-		</div>
+				// Get the popup title
+				$popupTitle = get_field('popup_title');
+				if ($popupTitle): ?>
+					<h3 class="popup-title"><?php echo $popupTitle ?></h3>
+				<?php
+				endif;
+
+				//Display the popup content
+				$popupContent = get_field('popup');
+				if ($popupContent == 'form'):
+						echo the_field('contact_form');
+				elseif ($popupContent == 'text'): ?>
+						<div class="popup-text-content">
+							<?php echo the_field('popup_content') ?>
+						</div>
+						<?php
+						$popupBtnLinkType = get_field('popup_link');
+						if ($popupBtnLinkType == 'internal'){
+							$popupBtnLink = get_field('popup_btn_internal_link');
+						}elseif ($popupBtnLinkType == 'external'){
+							$popupBtnLink = get_field('popup_btn_external_link');
+						}
+						 ?>
+						<a href="<?php echo $popupBtnLink ?>"><?php echo the_field('popup_btn_content') ?></a>
+				<?php endif; ?>
+			</div>
+
 	</div>
 
 <?php endif; ?>

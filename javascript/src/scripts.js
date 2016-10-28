@@ -10,11 +10,15 @@ jQuery(document).ready(function($) {
     });
 
     $('.popup-btn').on('click', function(){
-        $('#ctaPopup').toggleClass('hide-popup');
+        $('#ctaPopup').removeClass('hide-popup');
+        $('body').addClass('is-popup-on');
     });
 
-    $('.popupOverlay').on('click', function(){
-        $('#ctaPopup').toggleClass('hide-popup');
+    $('.popupOverlay').on('click', function(e){
+        if ($(e.target).hasClass('popupOverlay') ) {
+            $('#ctaPopup').addClass('hide-popup');
+            $('body').removeClass('is-popup-on');
+        }
     });
 
     var scroll_start = 0;
@@ -91,9 +95,9 @@ jQuery(document).ready(function($) {
           return false;
       });
 
-      setInterval(function () {
-          moveRight();
-      }, 3000);
+      // setInterval(function () {
+      //     moveRight();
+      // }, 3000);
 
 
 

@@ -1,0 +1,194 @@
+@import "neat/neat-helpers";
+$bp-desktop: new-breakpoint(min-width 980px);
+$bp-mobile: new-breakpoint(max-width 980px-1);
+@import "neat";
+
+/*----------------------
+   Features Icons
+-----------------------*/
+.service-wrapper{
+	padding: 0 20%;
+	text-align: center;
+	margin-top: 60px;
+	color: $gray;
+	@include media($bp-desktop) {
+		width: 21%;
+		padding: 0;
+	}
+}
+.feature-icon{
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.feature-title{
+	color: $light-blue;
+	font-family: $secondary-font;
+	font-size: 21px;
+}
+
+/*----------------------
+   Testimonials Slider
+-----------------------*/
+.testimonialsBg{
+	width:100%;
+	min-height:40vh;
+	background-size: cover;
+	background-position: center;
+	position:relative;
+	margin: 60px 0;
+	color:$white;
+}
+#slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto 0 auto;
+  border-radius: 4px;
+}
+
+#slider ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  min-height: 600px;
+  list-style: none;
+}
+
+#slider ul li {
+  position: relative;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 320px;
+	@include media($bp-desktop) {
+		width: 800px
+	}
+  min-height: 400px;
+  text-align: center;
+	img{
+		height: auto;
+		width: 200px;
+		margin: 0 auto;
+	}
+	.testimonial-sentence{
+		text-align: left;
+		font-size: 17px;
+		font-style: italic;
+		margin-bottom:40px;
+		p{
+			margin: 0;
+		}
+	}
+	.testimonial-name{
+		font-family: $secondary-font;
+		font-size: 18px;
+		font-weight: 600;
+		color: $orange;
+		text-align: right;
+	}
+	.testimonial-position{
+		font-family: $secondary-font;
+		font-size: 18px;
+		color: $white;
+		text-align: right;
+	}
+}
+
+a.control_prev, a.control_next {
+  position: absolute;
+  top: 25%;
+  z-index: 999;
+  display: block;
+  padding: 4% 1%;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  opacity: 0.8;
+  cursor: pointer;
+	img{
+		display: block;
+		width: auto;
+		height: 70px;
+	}
+}
+
+a.control_prev:hover, a.control_next:hover {
+  opacity: 1;
+  -webkit-transition: all 0.2s ease;
+}
+
+a.control_prev {
+  border-radius: 0 2px 2px 0;
+}
+
+a.control_next {
+  right: 0;
+  border-radius: 2px 0 0 2px;
+}
+
+/*----------------------
+   Standard CTA
+-----------------------*/
+.standard-cta{
+	margin-top: 90px;
+	text-align: center;
+}
+.standard-cta-title{
+	line-height: 1.4;
+	h2{
+		font-size: 42px;
+		margin: 0;
+		font-weight: 600;
+		margin-bottom: 30px;
+		@include media($bp-desktop) {
+			margin-bottom: 0;
+		}
+	}
+	h3{
+		font-size: 36px;
+		margin: 0;
+	}
+}
+.standard-cta-description{
+		font-size: 21px;
+		color: $dark-gray;
+		margin-top: 30px;
+}
+.standard-cta-buttons{
+	position: relative;
+	margin-top: 60px;
+	font-family: $secondary-font;
+	font-size: 17px;
+	min-height: 50px;
+	.mainCta{
+		background-color: $orange;
+		color:$white;
+		padding: 1rem 2rem;
+		border-radius: 3px;
+		font-weight: 600;
+		&:hover{
+			transition: all 0.14s;
+			text-decoration: none;
+			background-color: darken($orange, 5%);
+			-webkit-transition: all .15s ease-in-out;
+    	transition: all .15s ease-in-out;
+		}
+	}
+	.secondCta{
+		color: $orange;
+		margin: 30px 0;
+		display: inline-block;
+		padding: .7rem 1.7rem;
+		border: 2px solid white;
+		border-radius: 3px;
+		@include media($bp-desktop) {
+			margin: 0;
+			border: none;
+		}
+	}
+}

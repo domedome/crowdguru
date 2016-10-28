@@ -88,13 +88,15 @@ $customersLabel = get_field('customers_label');
 					<?php endif ?>
 			    </div>
 			<?php endif; ?>
+
 	    <?php if ($ctaController): ?>
 					<div class="l-col-8 cta-hero">
 						<?php get_template_part( 'template-parts/content', 'cta' ); ?>
 					</div>
 			<?php endif; ?>
+
 			<?php if ($customersCheck): ?>
-					<div class="customers-hero l-col-12">
+					<div class="customers-hero l-col-12 s-hidden">
 						<div class="customers-label"><?php echo $customersLabel ?></div>
 
 						<?php if( have_rows('customers_logos') ):
