@@ -9,17 +9,35 @@ jQuery(document).ready(function($) {
         $('body').toggleClass('is-menu-on');
     });
 
+    // -----------------------
+    // Popup Controls
+    // -----------------------
+
+    // Hero CTA buttons controls
     $('.popup-btn').on('click', function(){
         $('#ctaPopup').removeClass('hide-popup');
         $('body').addClass('is-popup-on');
     });
 
+    // Secondary CTA buttons controls
+    $('.standard-popup-btn').on('click', function(){
+        $('#secondaryPopup').removeClass('hide-popup');
+        $('body').addClass('is-popup-on');
+    });
+
+    // Popup dismiss
     $('.popupOverlay').on('click', function(e){
         if ($(e.target).hasClass('popupOverlay') ) {
+            $('#secondaryPopup').addClass('hide-popup');
             $('#ctaPopup').addClass('hide-popup');
             $('body').removeClass('is-popup-on');
         }
     });
+
+
+    // -----------------------
+    // Navbar background
+    // -----------------------
 
     var scroll_start = 0;
   	var startchange = $('.transparent-nav');
@@ -36,7 +54,10 @@ jQuery(document).ready(function($) {
 	  });
 
 
-    // Smoooth scroll for hashtag Navigation
+    // -----------------------
+    // Hashtag Navigation
+    // -----------------------
+
     $(function() {
       $('a[href*="#"]:not([href="#"])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -53,8 +74,9 @@ jQuery(document).ready(function($) {
     });
 
 
-
+    // -----------------------
     // Slider functions
+    // -----------------------
 
     var slideCount = $('#slider ul li').length;
   	var slideWidth = $('#slider ul li').width();
@@ -62,9 +84,7 @@ jQuery(document).ready(function($) {
   	var sliderUlWidth = slideCount * slideWidth;
 
   	$('#slider').css({ width: slideWidth, height: slideHeight });
-
   	$('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-
     $('#slider ul li:last-child').prependTo('#slider ul');
 
     function moveLeft() {

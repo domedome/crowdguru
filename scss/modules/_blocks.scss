@@ -135,6 +135,7 @@ a.control_next {
    Standard CTA
 -----------------------*/
 .standard-cta{
+	padding-bottom: 90px;
 	margin-top: 90px;
 	text-align: center;
 }
@@ -191,4 +192,28 @@ a.control_next {
 			border: none;
 		}
 	}
+}
+
+/*----------------------
+   Logos Stripe
+-----------------------*/
+.logos-stripe{
+	margin-bottom: 60px;
+	padding: 40px 0;
+}
+
+.stripe-label{
+	font-family: $secondary-font;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 2.7;
+	text-transform: uppercase;
+	color: $dark-gray;
+	text-decoration: underline;
+}
+
+.stripe-logo{
+	width: 150px;
+	height: 60px;
+	margin: 0 auto;
 }

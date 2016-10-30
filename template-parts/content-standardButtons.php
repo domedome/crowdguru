@@ -15,8 +15,8 @@ if ($mainBtnType == 'internal'){
 } elseif ($mainBtnType == 'anchor'){
 		$ctalink = '#'.get_sub_field('anchor');
 } elseif ($mainBtnType == 'popup'){
-		$ctalink = '#ctaPopup';
-		$popupClass = 'popup-btn';
+		$ctalink = '#SecondaryPopup';
+		$popupClass = 'standard-popup-btn';
 }
 ?>
 <a href="<?php echo $ctalink ?>" class="mainCta <?php echo $popupClass ?>" > <?php echo $mainStandardButton; ?></a>
@@ -47,36 +47,35 @@ if($secondaryStandard):
 <?php //The popup content
 
 	if ($mainBtnType == 'popup'): ?>
-
-	<div id="ctaPopup" class="popupOverlay hide-popup">
+	<div id="secondaryPopup" class="popupOverlay hide-popup">
 
 			<div class="popupContent">
 				<?php
 
 				// Get the popup title
-				$popupTitle = get_sub_field('popup_title');
-				if ($popupTitle): ?>
-					<h3 class="popup-title"><?php echo $popupTitle ?></h3>
+				$StandardPopupTitle = get_sub_field('popup_title');
+				if ($StandardPopupTitle): ?>
+					<h3 class="popup-title"><?php echo the_sub_field('popup_title') ?></h3>
 				<?php
 				endif;
 
 				//Display the popup content
-				$popupContent = get_sub_field('popup');
-				if ($popupContent == 'form'):
-						echo the_field('contact_form');
-				elseif ($popupContent == 'text'): ?>
+				$StandardpopupContent = get_sub_field('popup');
+				if ($StandardpopupContent == 'form'):
+						echo the_sub_field('contact_form');
+				elseif ($StandardpopupContent == 'text'): ?>
 						<div class="popup-text-content">
-							<?php echo the_field('popup_content') ?>
+							<?php echo the_sub_field('popup_content') ?>
 						</div>
 						<?php
-						$popupBtnLinkType = get_sub_field('popup_link');
-						if ($popupBtnLinkType == 'internal'){
-							$popupBtnLink = get_sub_field('popup_btn_internal_link');
-						}elseif ($popupBtnLinkType == 'external'){
-							$popupBtnLink = get_sub_field('popup_btn_external_link');
+						$StandardPopupLinkType = get_sub_field('popup_link');
+						if ($StandardPopupLinkType == 'internal'){
+							$StandardPopupBtnLink = get_sub_field('popup_btn_internal_link');
+						}elseif ($StandardPopupLinkType == 'external'){
+							$StandardPopupBtnLink = get_sub_field('popup_btn_external_link');
 						}
 						 ?>
-						<a href="<?php echo $popupBtnLink ?>"><?php echo the_field('popup_btn_content') ?></a>
+						<a href="<?php echo $StandardPopupBtnLink ?>"><?php echo the_sub_field('popup_btn_content') ?></a>
 				<?php endif; ?>
 			</div>
 

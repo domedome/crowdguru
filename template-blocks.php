@@ -106,6 +106,12 @@
                   <div class="l-container standard-cta">
                       <?php get_template_part( 'template-parts/content', 'standardCTA' ); ?>
                   </div>
+
+
+              <?php elseif( get_row_layout() == 'logos' ):?>
+                  <div class="logos-stripe s-hidden" style="background-color:<?php echo get_sub_field('stripe_bg') ?>">
+                      <?php get_template_part( 'template-parts/content', 'logoStripe' ); ?>
+                  </div>
               <?php endif;
             endwhile;
         else :
