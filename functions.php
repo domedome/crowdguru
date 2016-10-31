@@ -135,3 +135,29 @@ function hex2rgb($hex) {
    //return implode(",", $rgb); // returns the rgb values separated by commas
    return $rgb; // returns an array with the rgb values
 }
+
+/************************************
+ Reduce excerpt length
+*************************************/
+
+
+function excerpt($limit) {
+  $excerpt = explode(' ', get_the_excerpt(), $limit);
+  if (count($excerpt)>=$limit) {
+    array_pop($excerpt);
+    $excerpt = implode(" ",$excerpt).'...';
+  } else {
+    $excerpt = implode(" ",$excerpt);
+  }
+  $excerpt = preg_replace('`[[^]]*]`','',$excerpt);
+  return $excerpt;
+}
+
+// Filter the "read more" excerpt link
+// tn excerpt more
+function excerpt_more( $more ) {
+return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
+  get_permalink( get_the_ID() ),
+  __( 'Read More', 'textdomain' )
+  );
+}

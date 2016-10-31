@@ -75,7 +75,7 @@ if($secondaryStandard):
 							$StandardPopupBtnLink = get_sub_field('popup_btn_external_link');
 						}
 						 ?>
-						<a href="<?php echo $StandardPopupBtnLink ?>"><?php echo the_sub_field('popup_btn_content') ?></a>
+						<a href="<?php echo $StandardPopupBtnLink ?>" class="mainCta"><?php echo the_sub_field('popup_btn_content') ?></a>
 				<?php endif; ?>
 			</div>
 

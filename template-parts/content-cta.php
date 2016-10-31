@@ -76,7 +76,7 @@ if($secondaryCta):
 							$popupBtnLink = get_field('popup_btn_external_link');
 						}
 						 ?>
-						<a href="<?php echo $popupBtnLink ?>"><?php echo the_field('popup_btn_content') ?></a>
+						<a href="<?php echo $popupBtnLink ?>" class="mainCta"><?php echo the_field('popup_btn_content') ?></a>
 				<?php endif; ?>
 			</div>
 

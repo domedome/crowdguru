@@ -217,3 +217,38 @@ a.control_next {
 	height: 60px;
 	margin: 0 auto;
 }
+
+/*----------------------
+   Short Loop
+-----------------------*/
+.short-loop{
+	padding: 60px 0;
+}
+.single-short-loop{
+	background-color: $light-gray;
+	padding-bottom:30px;
+	.entry-header{
+		padding: 0 1.5em;
+		min-height: 90px;
+		margin-top: 15px;
+	}
+	h2{
+		margin: 0;
+		font-size: 21px;
+		line-height: 1.4;
+		font-weight: 600;
+	}
+	.entry-content{
+		padding: 0 1.5em;
+		margin-top: 15px;
+	}
+	.entry-read-more{
+		width: 100%;
+		text-align: right;
+		font-family: $secondary-font;
+		margin-top:10px;
+		a {
+			color: $light-blue;
+		}
+	}
+}

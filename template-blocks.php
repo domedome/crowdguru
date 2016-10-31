@@ -112,7 +112,32 @@
                   <div class="logos-stripe s-hidden" style="background-color:<?php echo get_sub_field('stripe_bg') ?>">
                       <?php get_template_part( 'template-parts/content', 'logoStripe' ); ?>
                   </div>
-              <?php endif;
+
+
+              <?php elseif( get_row_layout() == 'blog_loop' ):
+                  $args = $args = array('numberposts' => 3);
+                  $query = new WP_Query($args);
+                  if ( $query->have_posts() ): ?>
+                      <div class="l-container short-loop">
+                      <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+                      <div class="l-col-4 single-short-loop">
+                          <?php get_template_part( 'template-parts/content', 'shortLoop' ); ?>
+                      </div>
+                      <?php endwhile;
+                      wp_reset_postdata();?>
+                    </div>
+                    <div class="l-container">
+                        <a href="<?php get_site_url(); ?>blog" class="l-col-4 l-col-push-4 ctaBtn">
+                            <?php the_sub_field('to_the_blog_button'); ?>
+                        </a>
+                    </div>
+                  <?php else:
+                      echo 'No Post found';
+                  endif;
+
+
+
+              endif;
             endwhile;
         else :
                 echo 'Nothing to show here';
@@ -121,10 +146,10 @@
         ?>
 
         <?php
-        while (have_posts()) : the_post();
-            get_template_part( 'template-parts/content', 'single' );
-            comments_template();
-        endwhile;
+        // while (have_posts()) : the_post();
+        //     get_template_part( 'template-parts/content', 'single' );
+        //     comments_template();
+        // endwhile;
         ?>
     </main>
 </div>

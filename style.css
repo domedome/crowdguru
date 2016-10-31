@@ -1001,6 +1001,24 @@ input[type="submit"]:visited {
   input[type="submit"]:visited:active {
     top: 1px; }
 
+a.ctaBtn {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  min-height: 50px;
+  background-color: #FF6600;
+  color: #FFFFFF;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  font-weight: 600; }
+  a.ctaBtn:hover {
+    text-decoration: none;
+    background-color: #e65c00;
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out; }
+
 /*----------------------
    Pagination style
 -----------------------*/
@@ -1551,3 +1569,32 @@ a.control_next {
   width: 150px;
   height: 60px;
   margin: 0 auto; }
+
+/*----------------------
+   Short Loop
+-----------------------*/
+.short-loop {
+  padding: 60px 0; }
+
+.single-short-loop {
+  background-color: #f6f6f6;
+  padding-bottom: 30px; }
+  .single-short-loop .entry-header {
+    padding: 0 1.5em;
+    min-height: 90px;
+    margin-top: 15px; }
+  .single-short-loop h2 {
+    margin: 0;
+    font-size: 21px;
+    line-height: 1.4;
+    font-weight: 600; }
+  .single-short-loop .entry-content, .single-short-loop .wp-editor {
+    padding: 0 1.5em;
+    margin-top: 15px; }
+  .single-short-loop .entry-read-more {
+    width: 100%;
+    text-align: right;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-top: 10px; }
+    .single-short-loop .entry-read-more a {
+      color: #5694CB; }

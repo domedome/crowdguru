@@ -32,3 +32,24 @@ a.btn,
 a.btn:visited {
     @extend %btn;
 }
+
+
+a.ctaBtn{
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 60px;
+	font-family: $secondary-font;
+	font-size: 17px;
+	min-height: 50px;
+  background-color: $orange;
+  color:$white;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  font-weight: 600;
+  &:hover{
+    text-decoration: none;
+    background-color: darken($orange, 5%);
+    -webkit-transition: all .15s ease-in-out;
+    transition: all .15s ease-in-out;
+  }
+}
