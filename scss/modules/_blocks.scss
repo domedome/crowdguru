@@ -198,7 +198,6 @@ a.control_next {
    Logos Stripe
 -----------------------*/
 .logos-stripe{
-	margin-bottom: 60px;
 	padding: 40px 0;
 }
 
@@ -223,10 +222,12 @@ a.control_next {
 -----------------------*/
 .short-loop{
 	padding: 60px 0;
+	margin-top:90px;
 }
 .single-short-loop{
 	background-color: $light-gray;
 	padding-bottom:30px;
+	margin-bottom:90px;
 	.entry-header{
 		padding: 0 1.5em;
 		min-height: 90px;

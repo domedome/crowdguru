@@ -13,7 +13,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <?php 
+    <?php
     $navClass = '';
     $check = get_field('tranpatent_nav');
     if($check){

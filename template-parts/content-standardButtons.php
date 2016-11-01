@@ -31,12 +31,12 @@ if($secondaryStandard):
 	if ($secondaryBtnType == 'internal'){
 			$secondarylink = get_sub_field('second_link_internal');
 	} elseif ($secondaryBtnType == 'external'){
-			$secondaryBtnlink = get_sub_field('second_link_external');
+			$secondarylink = get_sub_field('second_link_external');
 	} elseif ($secondaryBtnType == 'anchor'){
-			$secondaryBtnlink = '#'.get_sub_field('second_link_anchor');
+			$secondarylink = '#'.get_sub_field('second_link_anchor');
 	}?>
 
-	<a href="<?php echo $secondaryBtnlink ?>" class="secondCta" > <?php echo $secondaryStandardContent; ?></a>
+	<a href="<?php echo $secondarylink ?>" class="secondCta" > <?php echo $secondaryStandardContent; ?></a>
 
 <?php endif; ?>
 

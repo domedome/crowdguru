@@ -154,10 +154,94 @@ function excerpt($limit) {
 }
 
 // Filter the "read more" excerpt link
-// tn excerpt more
 function excerpt_more( $more ) {
 return sprintf( '<a class="read-more" href="%1$s">%2$s</a>',
   get_permalink( get_the_ID() ),
-  __( 'Read More', 'textdomain' )
+  __( 'Read More', 'monsieurpress' )
   );
 }
+
+/************************************
+Option Page for theme settings
+*************************************/
+
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+  // Add translatable strings for the footer options
+  pll_register_string('footer-company', 'Footer: Company');
+  pll_register_string('footer-contact', 'Footer: Contact');
+  pll_register_string('footer-form', 'Footer: Contact Form');
+
+}
+
+/************************************
+Costom Post Type for Services
+*************************************/
+
+function custom_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Services', 'Post Type General Name', 'monsieurpress' ),
+		'singular_name'         => _x( 'Service', 'Post Type Singular Name', 'monsieurpress' ),
+		'menu_name'             => __( 'Services', 'monsieurpress' ),
+		'name_admin_bar'        => __( 'Service', 'monsieurpress' ),
+		'archives'              => __( 'Services', 'monsieurpress' ),
+		'parent_item_colon'     => __( 'Parent Service:', 'monsieurpress' ),
+		'all_items'             => __( 'All Services', 'monsieurpress' ),
+		'add_new_item'          => __( 'Add New Service', 'monsieurpress' ),
+		'add_new'               => __( 'Add Service', 'monsieurpress' ),
+		'new_item'              => __( 'New Service', 'monsieurpress' ),
+		'edit_item'             => __( 'Edit Service', 'monsieurpress' ),
+		'update_item'           => __( 'Update Service', 'monsieurpress' ),
+		'view_item'             => __( 'View Service', 'monsieurpress' ),
+		'search_items'          => __( 'Search Service', 'monsieurpress' ),
+		'not_found'             => __( 'Service Not found', 'monsieurpress' ),
+		'not_found_in_trash'    => __( 'Not found in Trash', 'monsieurpress' ),
+		'featured_image'        => __( 'Featured Image', 'monsieurpress' ),
+		'set_featured_image'    => __( 'Set featured image', 'monsieurpress' ),
+		'remove_featured_image' => __( 'Remove featured image', 'monsieurpress' ),
+		'use_featured_image'    => __( 'Use as featured image', 'monsieurpress' ),
+		'insert_into_item'      => __( 'Insert into service', 'monsieurpress' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this service', 'monsieurpress' ),
+		'items_list'            => __( 'Services list', 'monsieurpress' ),
+		'items_list_navigation' => __( 'Services list navigation', 'monsieurpress' ),
+		'filter_items_list'     => __( 'Filter services list', 'monsieurpress' ),
+	);
+	$args = array(
+		'label'                 => __( 'Service', 'monsieurpress' ),
+		'description'           => __( 'All the services', 'monsieurpress' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'menu_icon'             => 'dashicons-star-half',
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+	);
+	register_post_type( 'services', $args );
+
+}
+add_action( 'init', 'custom_post_type', 0 );
