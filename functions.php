@@ -196,21 +196,21 @@ Costom Post Type for Services
 function custom_post_type() {
 
 	$labels = array(
-		'name'                  => _x( 'Services', 'Post Type General Name', 'monsieurpress' ),
-		'singular_name'         => _x( 'Service', 'Post Type Singular Name', 'monsieurpress' ),
-		'menu_name'             => __( 'Services', 'monsieurpress' ),
-		'name_admin_bar'        => __( 'Service', 'monsieurpress' ),
-		'archives'              => __( 'Services', 'monsieurpress' ),
-		'parent_item_colon'     => __( 'Parent Service:', 'monsieurpress' ),
-		'all_items'             => __( 'All Services', 'monsieurpress' ),
-		'add_new_item'          => __( 'Add New Service', 'monsieurpress' ),
-		'add_new'               => __( 'Add Service', 'monsieurpress' ),
-		'new_item'              => __( 'New Service', 'monsieurpress' ),
-		'edit_item'             => __( 'Edit Service', 'monsieurpress' ),
-		'update_item'           => __( 'Update Service', 'monsieurpress' ),
-		'view_item'             => __( 'View Service', 'monsieurpress' ),
-		'search_items'          => __( 'Search Service', 'monsieurpress' ),
-		'not_found'             => __( 'Service Not found', 'monsieurpress' ),
+		'name'                  => _x( 'Leistungen', 'Post Type General Name', 'monsieurpress' ),
+		'singular_name'         => _x( 'Leistung', 'Post Type Singular Name', 'monsieurpress' ),
+		'menu_name'             => __( 'Leistungen', 'monsieurpress' ),
+		'name_admin_bar'        => __( 'Leistung', 'monsieurpress' ),
+		'archives'              => __( 'Leistungen', 'monsieurpress' ),
+		'parent_item_colon'     => __( 'Parent Leistung:', 'monsieurpress' ),
+		'all_items'             => __( 'All Leistungen', 'monsieurpress' ),
+		'add_new_item'          => __( 'Add New Leistung', 'monsieurpress' ),
+		'add_new'               => __( 'Add Leistung', 'monsieurpress' ),
+		'new_item'              => __( 'New Leistung', 'monsieurpress' ),
+		'edit_item'             => __( 'Edit Leistung', 'monsieurpress' ),
+		'update_item'           => __( 'Update Leistung', 'monsieurpress' ),
+		'view_item'             => __( 'View Leistung', 'monsieurpress' ),
+		'search_items'          => __( 'Search Leistung', 'monsieurpress' ),
+		'not_found'             => __( 'Leistung Not found', 'monsieurpress' ),
 		'not_found_in_trash'    => __( 'Not found in Trash', 'monsieurpress' ),
 		'featured_image'        => __( 'Featured Image', 'monsieurpress' ),
 		'set_featured_image'    => __( 'Set featured image', 'monsieurpress' ),
@@ -223,8 +223,8 @@ function custom_post_type() {
 		'filter_items_list'     => __( 'Filter services list', 'monsieurpress' ),
 	);
 	$args = array(
-		'label'                 => __( 'Service', 'monsieurpress' ),
-		'description'           => __( 'All the services', 'monsieurpress' ),
+		'label'                 => __( 'Leistung', 'monsieurpress' ),
+		'description'           => __( 'All the Leistungen', 'monsieurpress' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' ),
 		'hierarchical'          => false,
@@ -241,7 +241,33 @@ function custom_post_type() {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'page',
 	);
-	register_post_type( 'services', $args );
+	register_post_type( 'leistungen', $args );
 
 }
 add_action( 'init', 'custom_post_type', 0 );
+
+/************************************
+Rewrite Slugs in custom fields
+*************************************/
+
+// add_filter('pll_translated_post_type_rewrite_slugs', function($post_type_translated_slugs) {
+//     // Add translation for "product" post type.
+//     $post_type_translated_slugs = array(
+//         'leistungen' => array(
+//             'de' => array(
+//                 'has_archive' => true,
+//                 'rewrite' => array(
+//                     'slug' => 'leistung',
+//                 ),
+//             ),
+//             'en' => array(
+//                 'has_archive' => true,
+//                 'rewrite' => array(
+//                     'slug' => 'services',
+//                 ),
+//             ),
+//         ),
+//     );
+//     return $post_type_translated_slugs;
+// });
+// ?>

@@ -9,9 +9,14 @@ $bp-mobile: new-breakpoint(max-width 980px-1);
 .hero-image{
 	width:100%;
 	min-height:40vh;
-	background-size: cover;
-	background-position: center;
-	position:relative;
+	overflow: hidden;
+  margin: 0;
+  position: relative;
+	img {
+    position:absolute;
+    vertical-align: middle;
+    max-width: 100%;
+	}
 }
 .gradient-overlay{
 	width:100%;

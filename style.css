@@ -555,7 +555,7 @@ a:hover {
     overflow: visible; }
     .site-nav li {
       display: inline-block;
-      text-align: left;
+      text-align: right;
       position: relative; }
     .site-nav li a {
       padding: 0 1em;
@@ -564,7 +564,7 @@ a:hover {
     .site-nav li.current_page_item > a,
     .site-nav li.current_page_ancestor > a,
     .site-nav .current-menu-ancestor > a {
-      color: #27385D; } }
+      color: #FF6600; } }
 
 /*----------------------
    Sub menu
@@ -578,7 +578,8 @@ a:hover {
     background: #FFFFFF;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12); }
     .site-nav .sub-menu li > a {
-      color: #27385D; }
+      color: #27385D;
+      line-height: 35px; }
       .site-nav .sub-menu li > a:hover {
         color: #FF6600; } }
 
@@ -661,7 +662,7 @@ html {
   text-transform: uppercase;
   border-radius: 3px; }
 
-.footer-links > ul {
+.footer-nav ul {
   list-style: none;
   padding: 0; }
 
@@ -1280,9 +1281,13 @@ input[type="submit"] {
 .hero-image {
   width: 100%;
   min-height: 40vh;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+  margin: 0;
   position: relative; }
+  .hero-image img {
+    position: absolute;
+    vertical-align: middle;
+    max-width: 100%; }
 
 .gradient-overlay {
   width: 100%;
@@ -1449,7 +1454,8 @@ input[type="submit"] {
   @media screen and (min-width: 980px) {
     .service-wrapper {
       width: 21%;
-      padding: 0; } }
+      padding: 0;
+      min-height: 270px; } }
 
 .feature-icon {
   display: inline-block;

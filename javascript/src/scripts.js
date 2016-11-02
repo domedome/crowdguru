@@ -46,10 +46,10 @@ jQuery(document).ready(function($) {
   	$(document).scroll(function() {
   	   	scroll_start = $(this).scrollTop();
   	   	if(scroll_start > 50) {
-  	       	$('.transparent-nav').css('background-color', 'rgba(39,56,93,1)');
+  	       	$('.transparent-nav').addClass('header-bg');//css('background-color', 'rgba(39,56,93,1)');
       	}
       	else {
-     		   $('.transparent-nav').css('background-color', 'transparent');
+     		   $('.transparent-nav').removeClass('header-bg');//css('background-color', 'transparent');
   		  }
 	  });
 

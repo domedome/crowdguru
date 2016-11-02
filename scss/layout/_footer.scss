@@ -75,9 +75,11 @@ $bp-mobile: new-breakpoint(max-width 980px-1);
 	}
 }
 
-.footer-links > ul{
-	list-style: none;
-	padding: 0;
+.footer-nav{
+	ul{
+		list-style: none;
+		padding: 0;
+	}
 }
 
 .footer-copyright{
