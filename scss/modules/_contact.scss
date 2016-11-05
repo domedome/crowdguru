@@ -12,7 +12,7 @@ $bp-mobile: new-breakpoint(max-width 980px-1);
 		margin-top: 20vh;
 		@include media($bp-desktop) {
 			padding: 15px 30px;
-			margin-top: 30px;
+			margin-top: 30px;	
 		}
 		h2{
 				margin:0;

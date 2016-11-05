@@ -105,8 +105,7 @@ function front_assets_load() {
     wp_enqueue_script( 'monsieurpress-js', get_template_directory_uri() . '/javascript/dist/scripts.js', array('jquery'));
 
     /* Enqueue google font */
-    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,700');
-    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Open+Sans');
+    wp_enqueue_style( 'google-font', 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,600,700');
 
     /* Enqueue comment-reply script if needed */
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
