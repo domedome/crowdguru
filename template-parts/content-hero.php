@@ -44,7 +44,7 @@ $customersLabel = get_field('customers_label');
 				$colorBottom = get_field('gradient_color_bottom');
 				$bottom = hex2rgb($colorBottom);
 				?>
-				<style>
+				<style media="screen">
 					.gradient{
 						background: -moz-linear-gradient(-45deg, rgba(<?php echo $top ?>,.9) 0%, rgba(<?php echo $bottom ?>,.6) 100%);
 						background: -webkit-linear-gradient(-45deg, rgba(<?php echo $top ?>,.9) 0%,rgba(<?php echo $bottom ?>,.6) 100%);
@@ -58,7 +58,7 @@ $customersLabel = get_field('customers_label');
 		<div class="l-container">
 
 			<?php //Title & Subtitle ?>
-		    <div class="l-col-12 page-claim">
+		    <div class="l-col-8 page-claim">
 		    	<h1 class="page-claim-title" style="color:<?php echo $firstLineColor ?>"><?php echo $firstLine ?></h1>
 				<?php if($subtitle): ?>
 					<h2 class="page-claim-subtitle" style="color:<?php echo $secondLineColor ?>"><?php echo $secondLine ?></h2>
@@ -93,7 +93,7 @@ $customersLabel = get_field('customers_label');
 					<div class="l-col-8 cta-hero">
 						<?php get_template_part( 'template-parts/content', 'cta' ); ?>
 					</div>
-			<?php endif; ?>
+			<?php endif;  ?>
 
 			<?php if ($customersCheck): ?>
 					<div class="customers-hero l-col-12 s-hidden">
@@ -128,6 +128,10 @@ $customersLabel = get_field('customers_label');
 
 	</div>
 <?php elseif ($bg == 'map'): ?>
+	<?php $map = get_field('map'); ?>
+	<div class="hero-map">
+			<?php echo do_shortcode($map); ?>
+	</div>
 
 <?php elseif ($bg == 'none'): ?>
 	<div class="nohero"></div>

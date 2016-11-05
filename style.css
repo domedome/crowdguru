@@ -1,9 +1,9 @@
 /*!
-Theme Name: MonsieurPress
-Theme URI: http://www.monsieurpress.com/
-Author: David MANSON
-Author URI: http://www.david-manson.com/
-Description: Hello, I'm MonsieurPress, a super cool, lightweight & simple WordPress starter theme for developpers
+Theme Name: Crowd Guru
+Theme URI: http://www.crowdguru.de/
+Author: Domenico Catelli
+Author URI: http://www.domenicocatelli.com/
+Description: Based on the gorgeous work of David MANSON(http://www.david-manson.com/), MonsieurPress(http://www.monsieurpress.com/), a super cool, lightweight & simple theme adapted for Crowd Guru Gmbh
 Version: 1.0.0
 License: WTFPL
 License URI: http://www.wtfpl.net/
@@ -463,8 +463,8 @@ ul {
 
 h1, h2, h3, h4 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #27385D;
-  font-weight: 400; }
+  color: #5694CB;
+  font-weight: 600; }
 
 /*-----------------------
     Link Styles
@@ -523,7 +523,8 @@ a:hover {
   width: 100%;
   -webkit-transition: max-height .2s ease-in-out;
   transition: max-height .2s ease-in-out;
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
   .site-nav ul {
     list-style: none;
     padding: 0;
@@ -540,7 +541,7 @@ a:hover {
       color: #FF6600; }
   .no-js .site-nav,
   .is-menu-on .site-nav {
-    max-height: 300px; }
+    max-height: 100vh; }
 
 /*-----------------------------
    Navigation desktop layout
@@ -555,7 +556,7 @@ a:hover {
     overflow: visible; }
     .site-nav li {
       display: inline-block;
-      text-align: right;
+      text-align: left;
       position: relative; }
     .site-nav li a {
       padding: 0 1em;
@@ -569,19 +570,31 @@ a:hover {
 /*----------------------
    Sub menu
 -----------------------*/
+.site-nav .sub-menu {
+  margin-left: 15px; }
+  .site-nav .sub-menu li > a {
+    padding: 0.5em;
+    text-transform: none; }
+
 @media only screen and (min-width: 768px) {
   .site-nav .sub-menu {
     z-index: 9999;
     position: absolute;
-    right: 0;
-    padding: 0;
+    left: 0;
+    padding: 10px 0;
+    margin: 0;
     background: #FFFFFF;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.12); }
     .site-nav .sub-menu li > a {
       color: #27385D;
       line-height: 35px; }
       .site-nav .sub-menu li > a:hover {
-        color: #FF6600; } }
+        color: #FF6600; }
+    .site-nav .sub-menu li.current-menu-item > a,
+    .site-nav .sub-menu li.current_page_item > a,
+    .site-nav .sub-menu li.current_page_ancestor > a,
+    .site-nav .sub-menu .current-menu-ancestor > a {
+      color: #FF6600; } }
 
 /*----------------------
    Sub menu
@@ -1111,13 +1124,13 @@ a.ctaBtn {
     padding: 0 0 0 0.75em;
     border-left: 3px solid #27385D;
     font-style: italic;
-    color: #aebdc1; }
+    color: #D8D8D8; }
   .entry-content img, .wp-editor img {
     margin: 0 0 1.5em 0;
     max-width: 100%;
     height: auto; }
   .entry-content pre, .wp-editor pre {
-    background: #f6f6f6;
+    background: #fafafa;
     padding: 1.5em;
     margin: 0 0 1.5em;
     border-radius: 3px;
@@ -1141,8 +1154,8 @@ a.ctaBtn {
    Sticky post
 -----------------------*/
 .sticky {
-  border-top: 2px solid #f6f6f6;
-  border-bottom: 2px solid #f6f6f6; }
+  border-top: 2px solid #fafafa;
+  border-bottom: 2px solid #fafafa; }
 
 /*----------------------
    Admin Editor
@@ -1202,17 +1215,17 @@ a.ctaBtn {
 -----------------------*/
 .entry-content table, .wp-editor table {
   width: 100%;
-  border: 1px solid #aebdc1;
+  border: 1px solid #D8D8D8;
   margin-bottom: 1.5em; }
 
 .entry-content tr, .wp-editor tr {
-  border-bottom: 1px solid #aebdc1; }
+  border-bottom: 1px solid #D8D8D8; }
 
 .entry-content td, .wp-editor td {
   padding: 7px; }
 
 .entry-content th, .wp-editor th {
-  border-bottom: 1px solid #aebdc1; }
+  border-bottom: 1px solid #D8D8D8; }
 
 /* at this larger size, we can start to align images */
 @media only screen and (min-width: 481px) {
@@ -1236,7 +1249,7 @@ a.ctaBtn {
 .comment {
   list-style: none; }
   .comment > .comment-body {
-    border: 1px solid #f6f6f6;
+    border: 1px solid #fafafa;
     background: #FFFFFF;
     padding: 1em;
     margin: 2em 0; }
@@ -1266,7 +1279,7 @@ textarea {
   display: block;
   width: 100%;
   box-shadow: none;
-  border: thin solid #f6f6f6; }
+  border: thin solid #fafafa; }
   input:focus,
   textarea:focus {
     outline: none;
@@ -1281,13 +1294,9 @@ input[type="submit"] {
 .hero-image {
   width: 100%;
   min-height: 40vh;
-  overflow: hidden;
-  margin: 0;
+  background-size: cover;
+  background-position: center;
   position: relative; }
-  .hero-image img {
-    position: absolute;
-    vertical-align: middle;
-    max-width: 100%; }
 
 .gradient-overlay {
   width: 100%;
@@ -1380,8 +1389,8 @@ input[type="submit"] {
     color: #FF6600;
     font-weight: 600; }
   .popupContent input, .popupContent textarea {
-    background-color: #f6f6f6;
-    border: 1px solid #aebdc1;
+    background-color: #fafafa;
+    border: 1px solid #D8D8D8;
     height: 50px;
     margin: 0;
     border-radius: 3px;
@@ -1395,8 +1404,8 @@ input[type="submit"] {
     border: none; }
   .popupContent select {
     margin: 0;
-    border: 1px solid #aebdc1;
-    background-color: #f6f6f6;
+    border: 1px solid #D8D8D8;
+    background-color: #fafafa;
     width: 100%;
     padding: .5em;
     padding-left: 15px;
@@ -1443,19 +1452,26 @@ input[type="submit"] {
     .s-hidden {
       display: inherit; } }
 
+.hero-map {
+  width: 100%;
+  height: 80vh; }
+
 /*----------------------
    Features Icons
 -----------------------*/
 .service-wrapper {
   padding: 0 20%;
   text-align: center;
-  margin-top: 60px;
-  color: #aebdc1; }
+  margin-top: 60px; }
   @media screen and (min-width: 980px) {
     .service-wrapper {
       width: 21%;
       padding: 0;
       min-height: 270px; } }
+  .service-wrapper a {
+    color: #D8D8D8; }
+    .service-wrapper a:hover {
+      text-decoration: none; }
 
 .feature-icon {
   display: inline-block;
@@ -1464,10 +1480,12 @@ input[type="submit"] {
   background-size: cover;
   background-repeat: no-repeat; }
 
-.feature-title {
+.feature-title a {
   color: #5694CB;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 21px; }
+  .feature-title a:hover {
+    text-decoration: none; }
 
 /*----------------------
    Testimonials Slider
@@ -1644,7 +1662,7 @@ a.control_next {
   margin-top: 90px; }
 
 .single-short-loop {
-  background-color: #f6f6f6;
+  background-color: #fafafa;
   padding-bottom: 30px;
   margin-bottom: 90px; }
   .single-short-loop .entry-header {
@@ -1655,7 +1673,8 @@ a.control_next {
     margin: 0;
     font-size: 21px;
     line-height: 1.4;
-    font-weight: 600; }
+    font-weight: 600;
+    color: #27385D; }
   .single-short-loop .entry-content, .single-short-loop .wp-editor {
     padding: 0 1.5em;
     margin-top: 15px; }
@@ -1680,13 +1699,55 @@ a.control_next {
     list-style: none;
     margin-left: 0;
     padding-left: 0; }
+    .col-content ul li:before {
+      content: "+";
+      padding-right: 15px; }
   .col-content li {
-    padding-left: 1.5em;
-    text-indent: -1.5em;
-    padding-bottom: 5px; }
-  .col-content li:before {
-    content: "+";
-    padding-right: 5px; }
+    padding-left: 1.4em;
+    text-indent: -1.4em;
+    padding-bottom: 10px; }
   .col-content img {
     width: 100%;
     height: 100%; }
+
+.contact-form {
+  margin-top: 20vh; }
+  @media screen and (min-width: 980px) {
+    .contact-form {
+      padding: 15px 30px;
+      margin-top: 30px; } }
+  .contact-form h2 {
+    margin: 0; }
+  .contact-form input, .contact-form textarea {
+    background-color: #fafafa;
+    border: 1px solid #D8D8D8;
+    margin: 0;
+    border-radius: 3px;
+    padding-left: 15px; }
+  .contact-form input {
+    height: 50px; }
+  .contact-form textarea {
+    height: 120px; }
+  .contact-form input[type="submit"] {
+    background: #FF6600;
+    color: #FFFFFF;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: none; }
+  .contact-form select {
+    margin: 0;
+    border: 1px solid #D8D8D8;
+    background-color: #fafafa;
+    width: 100%;
+    padding: .5em;
+    padding-left: 15px;
+    font-size: 16px;
+    height: 50px;
+    border-radius: 3px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 0.9rem;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #808080; }

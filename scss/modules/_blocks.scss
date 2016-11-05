@@ -10,11 +10,17 @@ $bp-mobile: new-breakpoint(max-width 980px-1);
 	padding: 0 20%;
 	text-align: center;
 	margin-top: 60px;
-	color: $gray;
+
 	@include media($bp-desktop) {
 		width: 21%;
 		padding: 0;
 		min-height: 270px;
+	}
+	a{
+			color: $gray;
+			&:hover{
+					text-decoration: none;
+			}
 	}
 }
 .feature-icon{
@@ -24,10 +30,13 @@ $bp-mobile: new-breakpoint(max-width 980px-1);
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-.feature-title{
+.feature-title a{
 	color: $light-blue;
 	font-family: $secondary-font;
 	font-size: 21px;
+	&:hover{
+		text-decoration: none;
+	}
 }
 
 /*----------------------
@@ -239,6 +248,7 @@ a.control_next {
 		font-size: 21px;
 		line-height: 1.4;
 		font-weight: 600;
+		color: $dark-blue;
 	}
 	.entry-content{
 		padding: 0 1.5em;

@@ -27,15 +27,18 @@
                   <div <?php echo $anchorID; ?> class="l-col-12">
                   <?php if( have_rows('single_service') ):
 
-                      while ( have_rows('single_service') ) : the_row(); ?>
+                      while ( have_rows('single_service') ) : the_row();
+                        $link = get_sub_field('link');
+                        ?>
 
                         <div class="l-col-3 service-wrapper">
-                          <div class="feature-icon" style="background-image: url('<?php echo get_sub_field('icon'); ?>');"></div>
+                          </a>
+                          <a href="<?php echo $link ?>"><div class="feature-icon" style="background-image: url('<?php echo get_sub_field('icon'); ?>');"></div></a>
                           <div class="feature-title">
-                            <?php echo get_sub_field('title') ?>
+                            <a href="<?php echo $link ?>"><?php echo get_sub_field('title') ?></a>
                           </div>
                           <div>
-                            <?php echo get_sub_field('description') ?>
+                            <a href="<?php echo $link ?>"><?php echo get_sub_field('description') ?></a>
                           </div>
                         </div>
 

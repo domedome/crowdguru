@@ -6,7 +6,7 @@
 
         <?php
         while (have_posts()) : the_post();
-        $serviceIcon = get_field('service_icon');
+            if (the_content()):
         ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -21,7 +21,7 @@
             </div>
           </div>
 
-
+        <?php endif; ?>
         <?php endwhile; ?>
       </main>
 

@@ -1,0 +1,62 @@
+@import "neat/neat-helpers";
+$bp-desktop: new-breakpoint(min-width 980px);
+$bp-mobile: new-breakpoint(max-width 980px-1);
+@import "neat";
+
+// /*----------------------
+//    Contact
+// -----------------------*/
+.contact-form{
+		//border: 2px dashed $gray;
+		//border-radius: 3px;
+		margin-top: 20vh;
+		@include media($bp-desktop) {
+			padding: 15px 30px;
+			margin-top: 30px;
+		}
+		h2{
+				margin:0;
+		}
+		input, textarea{
+			background-color: $light-gray;
+			border: 1px solid $gray;
+			margin: 0;
+			border-radius: 3px;
+			padding-left:15px;
+		}
+
+		input{
+			height:50px;
+		}
+
+		textarea{
+			height:120px;
+		}
+
+		input[type="submit"]{
+			background: $orange;
+			color: $white;
+			font-family: $secondary-font;
+			font-weight: 600;
+			text-transform: uppercase;
+			border: none;
+		}
+
+		select {
+			 margin: 0;
+			 border: 1px solid $gray;
+			 background-color: $light-gray;
+			 width: 100%;
+			 padding: .5em;
+			 padding-left: 15px;
+			 font-size: 16px;
+			 height: 50px;
+			 border-radius: 3px;
+			 -webkit-appearance: none;
+			 -moz-appearance: none;
+			 appearance: none;
+			 font-size: 0.9rem;
+			 font-family: $secondary-font;
+			 color: $dark-gray;
+		 }
+}
