@@ -8,7 +8,7 @@
 
 	<!-- Post header -->
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php //the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         <aside class="entry-meta">
             <?php _e('Posted', 'monsieurpress'); ?> <?php the_date(); ?>
 			<?php _e('by', 'monsieurpress'); ?> <?php the_author(); ?>

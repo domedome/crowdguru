@@ -1,7 +1,7 @@
 <?php
 /************************************
- * Author: MANSON David
- * URL: http://www.david-manson.com
+ * Author: Domenico Catelli - starting from the great work of MANSON David
+ * URL:    http://domenicocatelli.com - - - - - - - - - - - - http://www.david-manson.com
  ************************************/
 
 
@@ -28,7 +28,7 @@ function theme_support() {
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'automatic-feed-links');
 	add_theme_support( 'menus' );
-    add_theme_support( 'title-tag' );
+  add_theme_support( 'title-tag' );
 
 	// Enable support for HTML5 markup.
 	add_theme_support( 'html5', array(
@@ -245,28 +245,4 @@ function custom_post_type() {
 }
 add_action( 'init', 'custom_post_type', 0 );
 
-/************************************
-Rewrite Slugs in custom fields
-*************************************/
-
-// add_filter('pll_translated_post_type_rewrite_slugs', function($post_type_translated_slugs) {
-//     // Add translation for "product" post type.
-//     $post_type_translated_slugs = array(
-//         'leistungen' => array(
-//             'de' => array(
-//                 'has_archive' => true,
-//                 'rewrite' => array(
-//                     'slug' => 'leistung',
-//                 ),
-//             ),
-//             'en' => array(
-//                 'has_archive' => true,
-//                 'rewrite' => array(
-//                     'slug' => 'services',
-//                 ),
-//             ),
-//         ),
-//     );
-//     return $post_type_translated_slugs;
-// });
-// ?>
+?>

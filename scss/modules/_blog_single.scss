@@ -1,0 +1,40 @@
+@import "neat/neat-helpers";
+$bp-desktop: new-breakpoint(min-width 980px);
+$bp-mobile: new-breakpoint(max-width 980px-1);
+@import "neat";
+
+/*----------------------
+   Blog Loop
+-----------------------*/
+
+.hero-blog{
+  	width:100%;
+  	min-height:100vh;
+  	background-size: cover;
+  	background-position: center;
+   	position:relative;
+}
+
+.post-head{
+    padding-top: 30vh;
+    position: relative;
+    h1 {
+        color: $white;
+        line-height: 1.2;
+        margin:0;
+        font-size: 36px;
+    }
+}
+.post-excerpt{
+    color: $white;
+    margin-top: 60px;
+    padding-bottom: 60px;
+    @include media($bp-desktop) {
+  		  font-size: 18px;
+  	}
+}
+
+.post-content{
+    margin-top: 60px;
+    
+}

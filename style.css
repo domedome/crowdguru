@@ -503,7 +503,7 @@ a:hover {
 .nohero {
   display: block;
   width: 100%;
-  height: 80px; }
+  height: 140px; }
 
 /*----------------------
    Logo
@@ -1030,10 +1030,12 @@ html {
   margin-bottom: 1em; }
 
 .widgets .widgettitle {
-  margin: .5em 0;
-  font-size: ms(0);
+  margin: 1.5em 0 .5em;
+  font-size: 1.2em;
   font-weight: bold;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #5694CB;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 /*----------------------
     Buttons
@@ -1052,10 +1054,14 @@ input[type="submit"]:visited {
   padding: .5em 1.5em;
   border: none;
   cursor: pointer;
-  background: #27385D;
+  background: #FF6600;
   text-align: center;
   -webkit-transition: all 0.14s ease-in-out;
-  transition: all 0.14s ease-in-out; }
+  transition: all 0.14s ease-in-out;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  min-height: 50px; }
   .btn:hover,
   a.btn:hover:visited, .comment-respond input.submit:hover, input[type="submit"]:hover, .btn:focus,
   a.btn:focus:visited, .comment-respond input.submit:focus, input[type="submit"]:focus,
@@ -1068,7 +1074,7 @@ input[type="submit"]:visited {
     color: #FFFFFF;
     text-decoration: none;
     outline: none;
-    background: #172238; }
+    background: #993d00; }
   .btn:active,
   a.btn:active:visited, .comment-respond input.submit:active, input[type="submit"]:active,
   .btn:visited:active,
@@ -1279,7 +1285,10 @@ textarea {
   display: block;
   width: 100%;
   box-shadow: none;
-  border: thin solid #fafafa; }
+  border: thin solid #D8D8D8;
+  background: #fafafa;
+  min-height: 50px;
+  border-radius: 3px; }
   input:focus,
   textarea:focus {
     outline: none;
@@ -1751,3 +1760,72 @@ a.control_next {
     font-size: 0.9rem;
     font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #808080; }
+
+/*----------------------
+   Widgets style
+-----------------------*/
+.widgets {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  opacity: 0.3; }
+  .widgets:hover, .widgets:active {
+    opacity: 1; }
+  .widgets ul {
+    padding: 0;
+    margin: 0; }
+    .widgets ul li {
+      list-style: none;
+      padding-bottom: .5em; }
+    .widgets ul a:hover {
+      text-decoration: none; }
+
+/*----------------------
+   Blog Loop
+-----------------------*/
+.main-loop {
+  background-color: #fafafa;
+  margin-bottom: 90px; }
+  .main-loop h2 {
+    margin-bottom: 0;
+    line-height: 1.4; }
+    .main-loop h2 a {
+      color: #5694CB; }
+      .main-loop h2 a:hover {
+        color: #5694CB;
+        text-decoration: none; }
+  .main-loop .entry-header {
+    padding: 0 1.5em; }
+  .main-loop .entry-content, .main-loop .wp-editor {
+    padding: 1em 1.5em; }
+  .main-loop .entry-meta {
+    color: #D8D8D8; }
+
+/*----------------------
+   Blog Loop
+-----------------------*/
+.hero-blog {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+
+.post-head {
+  padding-top: 30vh;
+  position: relative; }
+  .post-head h1 {
+    color: #FFFFFF;
+    line-height: 1.2;
+    margin: 0;
+    font-size: 36px; }
+
+.post-excerpt {
+  color: #FFFFFF;
+  margin-top: 60px;
+  padding-bottom: 60px; }
+  @media screen and (min-width: 980px) {
+    .post-excerpt {
+      font-size: 18px; } }
+
+.post-content {
+  margin-top: 60px; }

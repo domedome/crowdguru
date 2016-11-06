@@ -1,6 +1,9 @@
 <?php get_header(); ?>
+
+<div class="nohero"></div>
+
 <div class="l-container">
-    <main role="main" class="l-col-8 l-pad-2" id="posts">
+    <main role="main" class="l-col-6 l-pad-2" id="posts">
 
         <!-- The content -->
         <?php
@@ -16,7 +19,7 @@
     </main>
 
     <!-- Sidebar -->
-    <aside role="complementary" class="widgets l-col-4 l-pad-2" >
+    <aside role="complementary" class="widgets l-col-3 l-col-push-3 l-pad-2" >
         <?php get_sidebar(); ?>
     </aside>
 </div>

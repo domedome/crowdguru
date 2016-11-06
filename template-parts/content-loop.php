@@ -4,14 +4,14 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('main-loop'); ?>>
 
 	<!-- The thumbnail -->
-	<?php the_post_thumbnail('medium'); ?>
+	<a href="<?php echo get_permalink($post->ID); ?>"><?php the_post_thumbnail('full'); ?></a>
 
 	<!-- Post header -->
 	<header class="entry-header">
-		<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+		<?php the_title( '<h2 class="entry-title"><a href="<?php echo get_permalink($post->ID); ?>">', '</a></h2>' ); ?>
         <aside class="entry-meta">
             <?php _e('Posted', 'monsieurpress'); ?> <?php the_date(); ?> <?php _e('by', 'monsieurpress'); ?> <?php the_author(); ?>
         </aside>
@@ -19,7 +19,7 @@
 
 	<!-- Post excerpt -->
 	<div class="entry-content">
-		<?php the_excerpt(); ?>
+		<a href="<?php echo get_permalink($post->ID); ?>"><?php the_excerpt(); ?></a>
 	</div>
-	
+
 </article>

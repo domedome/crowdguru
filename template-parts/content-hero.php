@@ -5,9 +5,7 @@
 
 // Retrieving the hero Variables
 $bg = get_field('backgroung');
-$thumb_id = get_post_thumbnail_id();
-$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'thumbnail-size', true);
-$thumb_url = $thumb_url_array[0];
+//$thumb_id = get_post_thumbnail_id();
 
 // Claim and subtitle
 $firstLine = get_field('page_claim');
@@ -34,8 +32,22 @@ $customersLabel = get_field('customers_label');
 
 
 <?php if ($bg == 'image'): ?>
-	<div class="hero-image" style="background-image: url('<?php echo $thumb_url ?>')">
-
+	<div class="hero-image">
+		<style media="screen">
+				.hero-image{
+						background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'medium', false )[0] ?>');
+				}
+				@media (min-width: 767px) {
+						.hero-image{
+								background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0] ?>');
+						}
+				}
+				@media (min-width: 1023px) {
+						.hero-image{
+								background-image: url('<?php echo wp_get_attachment_image_src( get_post_thumbnail_id(), 'full', false )[0] ?>');
+						}
+				}
+		</style>
 		<?php //overlay gradient feature
 			$overlay = get_field('gradient_overlay');
 			if ($overlay):

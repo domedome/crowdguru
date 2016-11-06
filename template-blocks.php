@@ -118,7 +118,7 @@
 
 
               <?php elseif( get_row_layout() == 'blog_loop' ):
-                  $args = $args = array('numberposts' => 3);
+                  $args = array('numberposts' => 3);
                   $query = new WP_Query($args);
                   if ( $query->have_posts() ): ?>
                       <div class="l-container short-loop">

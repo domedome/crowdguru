@@ -10,15 +10,19 @@
     padding: .5em 1.5em;
     border: none;
     cursor: pointer;
-    background: $main-color;
+    background: $orange;
     text-align: center;
     transition: all 0.14s ease-in-out;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: $secondary-font;
+    min-height: 50px;
 
     &:hover, &:focus {
         color: $white;
         text-decoration: none;
         outline: none;
-        background: shade($main-color, 40%);
+        background: shade($orange, 40%);
     }
     &:active {
         top: 1px;

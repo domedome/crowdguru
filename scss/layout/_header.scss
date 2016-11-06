@@ -27,7 +27,7 @@ $margin-logo: ($header-height - $logo-height)/2;
 .nohero{
 	display: block;
 	width:100%;
-	height: $header-height+(2*$margin-logo);
+	height: 2*$header-height;
 }
 
 

@@ -1,0 +1,29 @@
+/*----------------------
+   Blog Loop
+-----------------------*/
+
+.main-loop{
+    background-color: $light-gray;
+    margin-bottom: 90px;
+    h2{
+        margin-bottom:0;
+        line-height: 1.4;
+        a{
+            color: $light-blue;
+            &:hover{
+                color: $light-blue;
+                text-decoration: none;
+            }
+        }
+
+    }
+    .entry-header{
+        padding: 0 1.5em;
+    }
+    .entry-content{
+        padding: 1em 1.5em;
+    }
+    .entry-meta{
+        color:$gray;
+    }
+}

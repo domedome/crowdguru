@@ -1,0 +1,22 @@
+/*----------------------
+   Widgets style
+-----------------------*/
+.widgets{
+    -webkit-transition: all .35s ease-in-out;
+    transition: all .35s ease-in-out;
+    opacity: 0.3;
+    &:hover, &:active{
+        opacity: 1;
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        li{
+            list-style: none;
+            padding-bottom: .5em;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+}

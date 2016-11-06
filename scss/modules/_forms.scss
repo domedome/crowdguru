@@ -9,7 +9,10 @@ textarea {
     display: block;
     width: 100%;
     box-shadow: none;
-    border: thin solid $light-gray;
+    border: thin solid $gray;
+    background: $light-gray;
+    min-height: 50px;
+    border-radius: 3px;
     &:focus{
         outline: none;
         border-color: $main-color;
