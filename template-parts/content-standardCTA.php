@@ -7,7 +7,7 @@ $firstLineColor = get_sub_field('standard_cta_first_line_color');
 $secondLine = get_sub_field('standard_cta_second_line');
 $secondLineColor = get_sub_field('standard_cta_second_line_color');
 ?>
-<div class="l-col-6 l-col-push-3 standard-cta-title">
+<div class="l-col-8 l-col-push-2 standard-cta-title">
 		<h2 style="color:<?php echo $firstLineColor ?>"><?php echo $firstLine ?></h2>
 		<h3 style="color:<?php echo $secondLineColor ?>"><?php echo $secondLine ?></h3>
 </div>

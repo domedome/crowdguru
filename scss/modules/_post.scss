@@ -1,3 +1,7 @@
+.static-t{
+    margin-bottom: 120px;
+}
+
 /*----------------------
    Post content
 -----------------------*/
@@ -167,4 +171,13 @@
         }
     }
 
+}
+
+/*----------------------
+   iframe basics Style
+-----------------------*/
+iframe{
+   width:100%;
+   height: 1200px;
+   display: block;
 }

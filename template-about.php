@@ -1,21 +1,19 @@
 <?php
 /*
- Template Name: Centered
+ Template Name: About
 */
 ?>
 
 <?php get_header(); ?>
 
-<div class="l-container">
-    <main class="l-col-12 static-t" role="main">
-
+    <main role="main">
         <?php
         while (have_posts()) : the_post();
-            get_template_part( 'template-parts/content', 'page' );
+            get_template_part( 'template-parts/content', 'aboutProfiles' );
             comments_template();
         endwhile;
         ?>
     </main>
-</div>
+
 
 <?php get_footer(); ?>

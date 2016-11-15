@@ -23,10 +23,14 @@
                   $anchorID = 'id="'.$anchorIDname.'"';
                 }
                 ?>
-                <div class="l-container">
-                  <div <?php echo $anchorID; ?> class="l-col-12">
-                  <?php if( have_rows('single_service') ):
+                <div <?php echo $anchorID; ?>>
 
+
+                  <?php if( have_rows('single_service') ): ?>
+                      <div class="l-container">
+                      <?php
+                      // check number of columns within a continer
+                      $i = 0;
                       while ( have_rows('single_service') ) : the_row();
                         $link = get_sub_field('link');
                         ?>
@@ -41,6 +45,14 @@
                             <a href="<?php echo $link ?>"><?php echo get_sub_field('description') ?></a>
                           </div>
                         </div>
+
+                        <?php // close container in case of 4 columns
+                        $i++;
+                        if($i % 4 == 0): ?>
+                            </div>
+                            <div class="l-container">
+                        <?php endif; ?>
+
 
             				  <?php endwhile;?>
                     </div>

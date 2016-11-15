@@ -1,0 +1,57 @@
+@import "neat/neat-helpers";
+$bp-desktop: new-breakpoint(min-width 980px);
+$bp-mobile: new-breakpoint(max-width 980px-1);
+@import "neat";
+
+// /*----------------------
+//    About
+// -----------------------*/
+.case-studies{
+		padding: 90px 0 30px;
+}
+
+.single-case{
+		min-height: 250px;
+		margin-bottom: 60px;
+		background: $light-gray;
+
+		a{
+				text-decoration: none;
+		}
+
+}
+
+.case-studies-pic{
+		width: 100%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+}
+
+.case-study-title{
+		margin: 20px auto 0;
+		font-size: 21px;
+		font-weight: 700;
+		font-family: $secondary-font;
+		color: $light-blue;
+		padding: 0 15px;
+}
+
+.case-study-description{
+		margin: 0 auto;
+		font-size: 14px;
+		color: $dark-gray;
+		min-height: 160px;
+		padding: 0 15px;
+}
+
+.case-study-download{
+		width: 100%;
+		padding: 10px 0;
+		line-height: 2;
+		border-radius: 2px;
+		background-color: $dark-blue;
+		a{
+				color: $white;
+		}
+}

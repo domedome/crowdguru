@@ -182,10 +182,12 @@ if( function_exists('acf_add_options_page') ) {
 	));
 
   // Add translatable strings for the footer options
-  pll_register_string('footer-company', 'Footer: Company');
-  pll_register_string('footer-contact', 'Footer: Contact');
-  pll_register_string('footer-form', 'Footer: Contact Form');
+}
 
+if ( function_exists( 'pll_current_language' )  ) {
+    pll_register_string('footer-company', 'Footer: Company');
+    pll_register_string('footer-contact', 'Footer: Contact');
+    pll_register_string('footer-form', 'Footer: Contact Form');
 }
 
 /************************************

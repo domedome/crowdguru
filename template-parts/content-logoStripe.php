@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for standard CTA block
+ * Template partial the logo stripe
  */
 $stripeLabel = get_sub_field('stripe_label');
 ?>

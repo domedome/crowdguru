@@ -11,7 +11,7 @@
 
 	<!-- Post header -->
 	<header class="entry-header">
-		<?php the_title( '<h2 class="entry-title"><a href="<?php echo get_permalink($post->ID); ?>">', '</a></h2>' ); ?>
+		<h2 class="entry-title"><a href="<?php echo get_permalink($post->ID); ?>"><?php the_title(); ?></a></h2>
         <aside class="entry-meta">
             <?php _e('Posted', 'monsieurpress'); ?> <?php the_date(); ?> <?php _e('by', 'monsieurpress'); ?> <?php the_author(); ?>
         </aside>

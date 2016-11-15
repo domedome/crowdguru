@@ -8,7 +8,6 @@ $bp-mobile: new-breakpoint(max-width 980px-1);
 .footer {
 	font-size: 14px;
 	color: $white;
-	margin-top:120px;
 	background-color: $dark-blue;
 	position: relative;
 	h3{
@@ -72,6 +71,10 @@ $bp-mobile: new-breakpoint(max-width 980px-1);
 		font-weight: 600;
 		text-transform: uppercase;
 		border-radius: 3px;
+		&:hover{
+			color: $dark-blue;
+			background-color: $white;
+		}
 	}
 }
 

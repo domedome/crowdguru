@@ -16,11 +16,14 @@
     <?php
     $navClass = '';
     $check = get_field('tranpatent_nav');
-    if($check){
+    if($check && !is_archive() ):
         $navClass = ' transparent-nav';
-    } else {
+    else:
         $navClass = ' header-bg';
-    }
+    endif;
+    if (is_home()):
+        $navClass = ' header-bg';
+    endif;
     ?>
     <div id="site-container" class="site-container">
         <header id="site-header" class="l-header header <?php echo $navClass; ?>">
@@ -50,4 +53,8 @@
             </div>
         </header>
         <div class="site-content">
-            <?php get_template_part( 'template-parts/content', 'hero' ); ?>
+            <?php if(!is_archive()):
+
+              get_template_part( 'template-parts/content', 'hero' );
+
+              endif;?>
